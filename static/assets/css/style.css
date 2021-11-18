@@ -1,0 +1,2731 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+#header {
+    width: 100%;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+    background-color: white;
+}
+
+#header nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#header .logo {
+    display: block;
+    height: 60px;
+    cursor: pointer;
+}
+
+#header section.menu {
+    width: 60%;
+}
+
+#header section.login {
+    width: 16%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#header section.login div.container {
+    width: auto;
+    height: 50px;
+    text-align: center;
+    padding: 5px 40px;
+    cursor: pointer;
+    position: relative;
+}
+
+#header section.login div.container .avatar_menu {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    transition: 0.3s ease all;
+    border: 1px solid black;
+    border-top: none;
+    z-index: 999999;
+    background-color: white;
+}
+
+#header section.login div.container:hover .avatar_menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+#header section.login div.container .avatar_menu div {
+    width: 100%;
+    padding: 10px 0;
+}
+
+#header section.login div.container .avatar_menu div:hover {
+    background-color: black;
+    color: white;
+}
+
+#header section.login .avatar {
+    display: block;
+    width: 45px;
+    height: 45px;
+    box-sizing: border-box;
+    padding: 2px;
+    border-radius: 100%;
+    margin: 0 auto;
+    border: 1px solid #5D5FEF;
+}
+
+#header section.login a {
+    width: 50%;
+    text-align: center;
+    padding: 21px 0;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 24px;
+    transition: all 0.5s ease;
+}
+
+#header section.login a:hover {
+    background-color: black;
+    color: white;
+}
+
+/*Top information in home page*/
+#topInfo {
+    position: relative;
+    width: 70%;
+    margin: 20px auto;
+}
+
+#topInfo h2.title {
+    position: relative;
+    display: inline-block;
+    margin: 10px 0;
+    font-size: 48px;
+}
+
+#topInfo h2.title.my_event {
+    position: absolute;
+    left: 51%;
+}
+
+#topInfo .header_line {
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    border-radius: 10px;
+    width: 100%;
+    height: 15px;
+    background-color: #B2F0E3;
+    z-index: -1;
+}
+
+#topInfo h2.title.my_event .header_line {
+    background-color: #FFB72D;
+}
+
+#topInfo .info_container {
+    width: 100%;
+    position: relative;
+    height: 500px;
+}
+
+#topInfo .info_container .first {
+    width: 49%;
+    height: 500px;
+    left: 0;
+    top: 0;
+}
+
+#topInfo .info_container .second {
+    width: 49%;
+    height: 245px;
+    right: 0;
+    top: 0;
+}
+
+#topInfo .info_container .third {
+    width: 24%;
+    height: 245px;
+    right: 25%;
+    bottom: 0;
+}
+
+#topInfo .info_container .fourth {
+    width: 24%;
+    height: 245px;
+    right: 0;
+    bottom: 0;
+}
+
+#topInfo .info_container>div {
+    position: absolute;
+    overflow: hidden;
+    border: 1px solid lightgray;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: box-shadow 0.5s ease;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#topInfo .info_container>div:hover {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+}
+
+#topInfo .info_container .eventInfo {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    color: white;
+    text-shadow: 3px 3px 3px black;
+}
+
+#topInfo .info_container .eventInfo h3 {
+    font-size: 24px;
+    line-height: 24px;
+}
+
+#topInfo .info_container .eventInfo p {
+    font-size: 20px;
+}
+
+#topInfo .topEventID {
+    display: none;
+}
+#topInfo.login .info_container {
+    width: 49%;
+}
+
+#topInfo.login .info_container .first {
+    width: 49%;
+    height: 245px;
+    left: 0;
+    top: 0;
+}
+
+#topInfo.login .info_container .second {
+    width: 49%;
+    height: 245px;
+    right: 0;
+    top: 0;
+}
+
+#topInfo.login .info_container .third {
+    width: 49%;
+    height: 245px;
+    left: 0;
+    bottom: 0;
+}
+
+#topInfo.login .info_container .fourth {
+    width: 49%;
+    height: 245px;
+    right: 0;
+    bottom: 0;
+}
+
+#topInfo.login .info_container .eventInfo p {
+    display: none;
+}
+
+#homeMyEvents {
+    width: 49%;
+    height: 500px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+/*Search bar on home page*/
+#search {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#search .bar {
+    width: 100%;
+    margin: 20px 0;
+}
+
+#search .bar form {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px 20px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#searchVal {
+    box-sizing: border-box;
+    height: 75px;
+    border: none;
+    outline: none;
+    width: 30%;
+    padding: 15px 20px;
+    background-color: rgba(231, 231, 231, 0.4);
+    border-radius: 10px;
+    margin-right: 11px;
+}
+
+#searchForm  .areaContainer {
+    width: 17%;
+    margin-right: 11px;
+    position: relative;
+}
+
+#searchForm .areas {
+    box-sizing: border-box;
+    position: relative;
+    height: 75px;
+    border: none;
+    appearance: none;
+    display: inline-block;
+    width: 100%;
+    outline: none;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: rgba(231, 231, 231, 0.4);
+    color: gray;
+    cursor: pointer;
+}
+
+#searchForm .fakeArrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px; 
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 16px 16px 0px 16px;
+    border-color: #979797 transparent transparent transparent;
+    transition: border-color 0.5s ease;
+}
+
+#searchForm .areas option {
+   font-size: 20px;
+}
+
+#search .bar form img {
+    box-sizing: border-box;
+    display: block;
+    height: 75px;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgba(231, 231, 231, 0.4);
+}
+
+#search .bar form img:hover {
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3); 
+}
+
+#search .bar .keywords {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.keyword {
+    border-radius: 50px;
+    padding: 5px 15px;
+    background-color: #FF7E06;
+    display: inline-block;
+    margin: 20px 10px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    color: white;
+}
+
+.keyword:hover {
+    background-color: black;
+}
+
+.keyword.no:hover {
+    background-color: #FF7E06;
+    cursor: default;
+}
+
+#search .result {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+#search .result h2 {
+    font-size: 20px;
+    margin: 10px 20px;
+}
+
+#search .result li.detail {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 20px 30px;
+}
+
+#search li.detail .intro {
+    width: 40%;
+}
+
+#search li.detail .intro h3:hover {
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+#search .intro span.time {
+    color: #FF7E06;
+}
+
+#search li.detail .remainInfo {
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#search li.detail .remainInfo strong {
+    font-size: 20px;
+}
+
+#search li.detail .remainInfo img {
+    display: block;
+    width: 40%;
+    border-radius: 10px;
+}
+
+#search li.detail .remainInfo img:hover {
+    box-shadow: 0px 5px 2px rgba(0, 0, 0, 0.3);
+    cursor:pointer;
+    transform: scale(1.1);
+}
+
+#search .eventID {
+    display: none;
+}
+
+#search .load_more {
+    display: inline-block;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#search .load_more.hidden {
+    display: none;
+}
+
+#search .load_more:hover {
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+#search .loading,
+#resume .save .spiral,
+#editEventMode .save .spiral,
+.applyContainer .applyWindow .bottom .send .spiral,
+#organiserManage .confirm .yes .spiral,
+#myApplication .confirm .yes .spiral {
+    display: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border-top: 2px solid black;
+    margin: 0 auto;
+    animation: spiral 0.5s ease infinite;
+}
+
+#resume .save .spiral,
+#editEventMode .save .spiral {
+    display: block!important;
+    border-top: 2px solid white;
+}
+
+#search .loading.spiral,
+.applyContainer .applyWindow .bottom .send .spiral,
+#organiserManage .confirm .yes .spiral,
+#myApplication .confirm .yes .spiral {
+    display: block;
+}
+
+@keyframes spiral {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*Event detail page main part*/
+#event {
+    width: 80%;
+    margin: 50px auto;
+}
+#event .topContainer {
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+#event .detail {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+#event .detail img {
+    display: inline-block;
+    width: 25%;
+}
+
+#event .intro {
+    width: 60%;
+}
+
+#event .intro h2 {
+    font-size: 50px;
+}
+
+#event .intro .info {
+    display: flex;
+}
+
+#event .intro .info p {
+    font-size: 20px;
+}
+
+#event .info .title p {
+    color: burlywood;
+    margin: 10px 0;
+}
+
+#event .info .data p {
+    margin: 10px 0;
+}
+
+#event .info .data p.status {
+    text-transform: Capitalize;
+}
+
+#event .intro .info .title {
+    margin-right: 20px;
+}
+
+#event .intro .interact {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#event .intro .interact .apply,
+#event .location .apply,
+#event .intro .interact .edit,
+#event .location .edit {
+    display: inline-block;
+    padding: 10px 60px;
+    color: white;
+    background-color: #5D5FEF;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.5s ease ;
+}
+
+#event .intro .interact .applied,
+#event .location .applied,
+#event .intro .interact .ended,
+#event .location .ended {
+        display: inline-block;
+        padding: 10px 30px;
+        color: white;
+        background-color: #A5A6F6;
+        border-radius: 10px;
+        cursor: not-allowed;
+}
+
+#event .intro .interact .apply:hover,
+#event .location .apply:hover,
+#event .intro .interact .edit:hover,
+#event .location .edit:hover {
+    background-color: black;
+}
+
+/*Event description*/
+#event .desc {
+    margin: 60px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#event .desc .text {
+    width: 60%;
+}
+
+#event .desc .text.edit {
+    width: 90%;
+}
+
+#event .desc .text div.descContainer {
+    margin-left: 42px;
+    line-height: 24px;
+}
+
+#event .desc .text img {
+    margin-left: 42px;
+    height: 24px;
+    vertical-align: middle;
+    width: auto;
+}
+
+#event .desc .text span {
+    line-height: 24px;
+}
+
+#event .desc .text h3,
+#event .desc .organization h3 {
+    font-size: 20px;
+    margin: 30px;
+}
+
+#event .desc .organization h3 {
+    color: #5D5FEF;
+}
+
+#event .desc .organization {
+    width: 25%;
+    background-color: rgba(165, 166, 246, 0.1);
+    padding-bottom: 65px;
+}
+
+#event .organization .info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#event .organization .info h4 {
+    font-size: 20px;
+    width: 80%;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+#event .organization .info img.avatar {
+    width: 40%;
+    border-radius: 100%;
+}
+
+#event .organization .info .container {
+    width: 75%;
+}
+
+#event .organization .info h5 {
+    color: #5D5FEF;
+    margin: 5px 0;
+}
+
+#event .organization .info .container .area {
+    padding: 2px 15px;
+    display: inline-block;
+    margin: 5px;
+    border-radius: 50px;
+    background-color: rgba(165, 166, 246, 0.5);
+    cursor: pointer;
+}
+
+#event .organization .info .container .area:hover {
+    background-color: black;
+    color:white;
+}
+
+#event .organization .info .container p:first-of-type {
+    width: 80%!important;
+}
+
+#event .desc .container img {
+    height: 24px;
+    vertical-align: middle;
+    width: auto;
+}
+
+/*Location part*/
+#event .location {
+    width: 100%;
+    padding-left: 5%;
+    position: relative;
+    margin-bottom: 90px;
+}
+
+#event .location h2 {
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+#event .location h2 img {
+    vertical-align: middle;
+}
+
+#event .location p {
+    margin: 20px 40px;
+}
+
+#event .location .map,
+#editEventMap {
+    width: 60%;
+    height: 320px;
+}
+
+#event .location .apply,
+#event .location .edit,
+#event .location .applied,
+#event .location .ended {
+    position: absolute;
+    left: 50%;
+    bottom: -70px;
+}
+
+#event .applyContainer .applyWindow {
+    display: flex;
+    align-items: center;
+}
+
+#event .applyContainer .applyWindow .applyInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#event .applyContainer .applyWindow .top {
+    width: 90%;
+    margin: 20px 0;
+    border-bottom: 1px solid gray;
+}
+
+#event .applyContainer .applyWindow .top h3 {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    padding: 30px 0;
+}
+
+#event .applyContainer .applyWindow h4 {
+    font-size: 20px;
+    margin: 30px 0;
+}
+
+#event .applyContainer .applyWindow h4 strong.warn {
+    color: red;
+    font-size: 24px;
+}
+
+#event .applyContainer .applyWindow h4 strong.success {
+    color: green;
+    font-size: 24px;
+}
+
+#event .applyContainer .applyWindow .top img {
+    display: block;
+    width: 150px;
+    margin: 10px auto;
+}
+
+#event .applyContainer .applyWindow .top .operation {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 24px;
+}
+
+#event .applyContainer .applyWindow .top .operation span {
+    font-size: 20px;
+}
+
+#event .applyContainer .applyWindow .top .operation span:hover {
+    color: #5D5FEF;
+    cursor: pointer;
+}
+
+#event .applyContainer .applyWindow .top .addIcon {
+    width: 150px;
+    height: 200px;
+    box-sizing: border-box;
+    border: 2px solid #5D5FEF;
+    background-color: #F5F5F7;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;  
+    transition: all ease 0.5s;
+}
+
+#event .applyContainer .applyWindow .top .addIcon svg {
+    width: 71px;
+    height: 74px;
+    color: #5D5FEF;
+}
+
+#event .applyContainer .applyWindow .top .addIcon:hover {
+    background-color: #5D5FEF;
+}
+
+#event .applyContainer .applyWindow .top .addIcon:hover svg {
+    color: white;
+}
+
+#event .applyContainer .applyWindow .bottom {
+    width: 90%;
+    margin: 15px 0;
+}
+
+#event .applyContainer .applyWindow .bottom p {
+    font-size: 14px;
+    padding-left: 35px;
+}
+
+#event .applyContainer .applyWindow .bottom .send,
+#event .applyContainer .applyWindow .bottom .noSend  {
+    display: inline-block;
+    color: #5D5FEF;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 30px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid #5D5FEF;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+#event .applyContainer .applyWindow .bottom .noSend  {
+    color: white;
+    background-color: rgba(165, 166, 246, 0.64);
+    border: 2px solid white;
+    cursor: not-allowed;
+}
+
+#event .applyContainer .applyWindow .bottom .send:hover {
+    background-color: black;
+    color: white;
+}
+
+/*Comment on event detail page*/
+#event section.comment {
+    margin-left: 5%;
+    box-sizing: border-box;
+    width: 60%;
+    border: 2px solid rgb(235, 235, 235);
+    padding: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+} 
+
+#event .comment h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+#event .comment h2 .error {
+    color: red;
+}
+
+#commentContentForm {
+    width: 100%;
+}
+
+#commentContentForm input {
+    border: 2px solid rgb(235, 235, 235);
+    width: 80%;
+    outline: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+#event .commentTextContainer,
+#event .replyTextAreaContainer {
+    width: 85%;
+}
+
+#event .commentTextContainer.hide,
+#event .replyTextAreaContainer.hide,
+#commentContentForm.hide,
+#event .comment h2 .error.hide {
+    display: none;
+}
+
+#event .commentTextContainer div.cancel,
+#event .commentTextContainer div.comment,
+#event .replyTextAreaContainer div.cancelButton,
+#event .replyTextAreaContainer div.commentButton {
+    display: inline-block;
+    width: auto;
+    font-weight: bold;
+    padding: 10px 10px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+    transition: all 0.5s ease;
+}
+
+#event .commentTextContainer div.comment,
+#event .replyTextAreaContainer div.commentButton {
+    border: 2px solid #5D5FEF;
+    color: #5D5FEF;
+}
+
+#event .commentTextContainer div.cancel,
+#event .replyTextAreaContainer div.cancelButton {
+    border: 2px solid #EF5D5D;
+    color: #EF5D5D;
+}
+
+#event .commentTextContainer div.cancel:hover,
+#event .commentTextContainer div.comment:hover,
+#event .replyTextAreaContainer div.cancelButton:hover,
+#event .replyTextAreaContainer div.commentButton:hover {
+    background-color: black;
+    color: white;
+    border-color: black;
+}
+
+#event .comment .data {
+    width: 100%;
+    overflow: hidden;
+    border-top: 2px solid rgb(235, 235, 235);
+    position: relative;
+}
+
+#event .comment .commentReplies {
+    width: 100%;
+    overflow: hidden;
+}
+
+#event .comment .commentReplies.hide {
+    display: none;
+}
+
+#event .comment .data.reply {
+    width: 70%;
+    box-sizing: border-box;
+    border: none;
+    margin-bottom: 15px;
+    margin-left: 30%;
+}
+
+#event .comment .data .dianzan {
+    position: absolute;
+    right: 1%;
+    bottom: 35%;
+    display: flex;
+    align-items: end;
+    margin-right: 5px;
+}
+
+#event .comment .data .dianzan svg {
+    width: 25px;
+    height: 25px;
+    display: block;
+    cursor: pointer;
+    color: lightgray;
+    transition: color 0.5s ease;
+}
+
+#event .comment .data .dianzan svg.liked {
+    color: red;
+}
+
+#event .comment .data .dianzan svg:hover {
+    color: black
+}
+
+#event .comment .data .dianzan .amount {
+    font-weight: bold;
+}
+
+#event .data .user_info {
+    margin: 30px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#event .data .user_info .name {
+    display: flex;
+    align-items: center;
+}
+
+#event .data .user_info .name .avatar {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+#event .data .user_info .name span {
+    font-weight: bold;
+    position: relative;
+}
+
+#event .data .user_info .name span .avatarTitle {
+    position: absolute;
+    left: 105%;
+    bottom: 20%;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 3px;
+    border-radius: 5px;
+    background-color: #F7D358;
+}
+
+#event .data .content {
+    margin-left: 30px;
+    width: 60%;
+}
+
+#event .data .interact {
+    float: right;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+#event .data .interact .replyButton {
+    cursor: pointer;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+#event .data .interact .replyButton:hover {
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+#event .data .interact .showReplies {
+    cursor: pointer;
+    line-height: 18px;
+    color:rgb(59, 182, 225);
+}
+
+#event .data .interact .showReplies:hover {
+    border-bottom: 1px solid rgb(59, 182, 225);
+}
+
+/*Aside*/
+#aside {
+    z-index: 100;
+}
+
+#aside .scroll_top {
+    position: fixed;
+    right: 50px;
+    bottom: 5%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s linear;
+    z-index: 100;
+}
+
+#aside .scroll_top a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#aside .rocket {
+    height: 5em;
+    width: auto;
+}
+
+#aside .fire {
+    height: auto;
+    width: 1em;
+    margin-top: -5px;
+    transform: scale(0);
+}
+
+#aside .scroll_top:hover .rocket {
+    animation: rocket 0.5s linear infinite;
+}
+
+#aside .scroll_top:hover .fire {
+    animation: fire 0.5s ease-in-out infinite;
+}
+
+@keyframes rocket {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fire {
+    0% {
+        transform: scale(0);
+
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+/*Login page in home*/
+#login,
+#resume .chooseTime,
+#resume .chooseArea,
+#event.edit .chooseArea,
+#event .applyContainer,
+#organiserManage .chooseTime,
+#organiserManage .chooseArea,
+#organiserManage .confirm,
+#myApplication .confirm {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+}
+
+#login.hide,
+#event .applyContainer.hide {
+    display: none;
+}
+
+#login .container,
+#resume .chooseTime .timeChosenWindow,
+#resume .chooseArea .areaChosenWindow,
+#event.edit .chooseArea .areaChosenWindow,
+#event .applyContainer .applyWindow,
+#organiserManage .chooseTime .timeChosenWindow,
+#organiserManage .chooseArea .areaChosenWindow,
+#organiserManage .confirm .confirmWindow,
+#myApplication .confirm .confirmWindow {
+    position: relative;
+    width: 600px;
+    height: 550px;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+}
+
+#resume .chooseTime .timeChosenWindow,
+#resume .chooseArea .areaChosenWindow,
+#event.edit .chooseArea .areaChosenWindow,
+#event .applyContainer .applyWindow,
+#organiserManage .chooseTime .timeChosenWindow,
+#organiserManage .chooseArea .areaChosenWindow,
+#organiserManage .confirm .confirmWindow,
+#myApplication .confirm .confirmWindow {
+    background-color: white;
+    border-radius: 10px;
+}
+
+#login .container .cancel,
+#resume .chooseTime .timeChosenWindow .cancel,
+#resume .chooseArea .areaChosenWindow .cancel,
+#event.edit .chooseArea .areaChosenWindow .cancel,
+#event .applyContainer .applyWindow .cancel,
+#organiserManage .chooseTime .timeChosenWindow .cancel,
+#organiserManage .chooseArea .areaChosenWindow .cancel,
+#organiserManage .confirm .confirmWindow .cancel,
+#myApplication .confirm .confirmWindow .cancel {
+    position: absolute;
+    right: 30px;
+    top: 21px;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+#login .container .windows {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1800px;
+    height: 550px;
+    font-size: 0px;
+    padding: 0;
+}
+
+#login .container .cancel:hover,
+#login form img:hover,
+#resume .chooseTime .timeChosenWindow .cancel:hover,
+#resume .chooseArea .areaChosenWindow .cancel:hover,
+#event.edit .chooseArea .areaChosenWindow .cancel:hover,
+#event .applyContainer .applyWindow .cancel:hover,
+#organiserManage .chooseTime .timeChosenWindow .cancel:hover,
+#organiserManage .chooseArea .areaChosenWindow .cancel:hover,
+#organiserManage .confirm .confirmWindow .cancel:hover,
+#myApplication .confirm .confirmWindow .cancel:hover {
+    filter: drop-shadow(3px 3px 3px black);
+}
+
+#login .container .login_page,
+#login .container .role_page,
+#login .container .register_page {
+    width: 600px;
+    height: 550px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#login h3 {
+    display: block;
+    overflow: hidden;
+    margin: 30px 0;
+    font-size: 34px;
+    line-height: 36px;
+    margin-bottom: 20px;
+    margin-left: 20%;
+}
+
+#login h3 span {
+    font-size: 30px;
+    line-height: 40px;
+    color:#5D5FEF;
+}
+
+#login .container .login_page .content p:first-of-type b{
+    color: #5D5FEF;
+}
+
+#login .content {
+    width: 330px;
+    margin: 0 auto;
+}
+
+#login .content strong {
+    cursor: pointer;
+}
+
+#login .content strong:hover {
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+#login .content form{
+    margin-top: 69px;
+}
+
+#login form label {
+    display: inline-block;
+    position: relative;
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 5px;
+}
+
+#login form input {
+    display: block;
+    width: 100%;
+    margin-bottom: 50px;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+}
+
+#login #registerForm input {
+    margin-bottom: 30px;
+}
+
+#userType {
+    display: none!important;
+}
+
+#login form input#remember {
+    display: inline;
+    width: auto;
+    width: 20px;
+    height: 20px;
+    margin: 0 10px 0 0;
+}
+
+#login input:focus {
+    font-size: 16px!important;
+    font-weight: normal!important;
+}
+
+#login form img {
+    position: absolute;
+    left: 310px;
+    top: 35px;
+    cursor: pointer;
+}
+
+#login form p.error,
+#login form span.error {
+    color: red;
+    display: none;
+}
+
+#login form p.error.show {
+    display: block;
+}
+
+#login form span.error.show {
+    display: inline;
+}
+
+#login form .submit {
+    width: auto;
+    float: right;
+    color: #5D5FEF;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #5D5FEF;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+#login .submit:hover,
+#login .role_page .role:hover {
+    background-color: #5D5FEF;
+    color: white;
+}
+
+#login .role_page .role {
+    border: 2px solid #5D5FEF;
+    color: #5D5FEF;
+    border-radius: 5px;
+    padding: 20px 0 20px 40px;
+    margin: 30px 0;
+    cursor: pointer;
+}
+
+#login .role_page .role:first-of-type {
+    margin-top: 100px;
+}
+
+#login .register_page .content {
+    position: relative;
+    padding-top: 60px;
+}
+
+#login .register_page .back {
+    position: absolute;
+    font-weight: bold;
+    left: -100px;
+    bottom: -100px;
+    cursor: pointer;
+}
+
+#login .register_page .back:hover {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+/*Resume*/
+#resume {
+    width: 100%;
+}
+
+#resume .top {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 65px;
+    padding: 30px;
+    border-bottom: 1px solid lightgray;
+}
+
+#resume .top h2 {
+    display: inline-block;
+    font-size: 48px;
+    text-transform:capitalize;
+    margin-bottom: 80px;
+}
+
+#resume .top .edit {
+    display: inline-block;
+    color: white;
+    background-color: #5D5FEF;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 30px;
+    position: relative;
+    top: -10px;
+    transition: all 0.5s ease;
+    font-weight: 500;
+    font-size: 18px;
+    border: 2px solid black;
+}
+
+#resume .top .edit:hover {
+    background-color: black;
+}
+
+#resume .top .infoContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#resume .top .infoContainer .basic {
+    width: 60%;
+    display:flex;
+}
+
+#resume .top .infoContainer .basic .data {
+    margin-left: 30px;
+}
+
+#resume .top .infoContainer .basic .title p {
+    color: #A39898;
+}
+
+#resume .top .infoContainer .basic p{
+    font-size: 20px;
+    margin: 25px 0;
+}
+
+#resume .top .infoContainer .avatar {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -5%;
+    overflow: hidden;
+}
+
+#resume .top .infoContainer .avatar h3 {
+    font-size: 20px;
+}
+
+#resume .top .infoContainer .avatar img {
+    width: 40%;
+    display: block;
+    border-radius: 100%;
+}
+
+#resume .bottom {
+    width: 70%;
+    padding: 40px;
+    margin: 0 auto;
+}
+
+#resume .bottom h3 {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+#resume .bottom h3 .error,
+#resume .top .times .error,
+#resume .top .areas .error,
+#event.edit .error {
+    color: red;
+    display: none;
+}
+
+#resume .bottom h3 .error.show,
+#resume .top .times .error.show,
+#resume .top .areas .error.show,
+#event.edit .error.show {
+    display: inline;
+}
+
+#resume .bottom .desc p, 
+#resume .bottom .requirements,
+#resume .bottom .desc .descContainer,
+#editEventDesc {
+    margin: 30px 0 100px 20px;
+}
+
+#event.edit .desc .requirements {
+    margin: 30px 0 100px 40px!important;
+}
+
+#resume .bottom .desc .descContainer {
+    width: 70%;
+}
+
+#resume .bottom .desc p {
+    line-height: 24px;
+    letter-spacing: 0.5px;
+}
+
+
+/*Edit Resume*/
+#resume .mode,
+#editEventMode {
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    font-weight: 300;
+    font-size: 60px;
+    line-height: 72px;
+    letter-spacing: -0.5px;
+    color: #FF7E06;
+    text-align: center;
+    padding: 5px;
+    background-color: rgba(255, 207, 114, 0.5);
+    z-index: 10000;
+}
+
+#resume .mode .save,
+#editEventMode .save {
+    position: absolute;
+    top: 15px;
+    right: 240px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 16px;
+    letter-spacing: 1.25px;
+    color: white;
+    background-color: #5D5FEF;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: 0.5s ease all;
+}
+
+#resume .mode .save:hover,
+#editEventMode .save:hover {
+    background-color: black;
+}
+
+#editResumeForm {
+    width: 100%;
+}
+
+#resume .top .infoContainer .basic .data label {
+    display: block;
+    margin: 23px 0;
+}
+
+#resume .top .infoContainer .basic .data input,
+#resume .top .infoContainer .basic .data select,
+#event.edit .intro input,
+#event.edit .location input,
+#event.edit .intro select {
+    outline: none;
+    width: 286px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: 20px;
+    padding: 0px 10px;
+    font-weight: bold;
+}
+
+#resume .top .infoContainer .basic .data input:focus,
+#event.edit .intro input:focus,
+#event.edit .location input:focus {
+    font-weight: 500;
+}
+
+#resume .top .infoContainer .basic .error {
+    color: red;
+    margin-left: 10px;
+    display: none;
+}
+
+#resume .top .infoContainer .basic .error.show {
+    display: inline;
+}
+
+#resume .top .infoContainer .avatar .cropper_container {
+    width: 40%;
+}
+
+#resume .top .infoContainer .avatar #image {
+    border-radius: none;
+    max-width: 100%;
+    width: 100%;
+}
+
+#resume .top .infoContainer .avatar .preview_container {
+    margin-top: 20px;
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#resume .top .infoContainer .avatar .preview_container .get_url {
+    font-size: 20px;
+    padding: 5px 10px;
+    width: 20%;
+    border-radius: 5px;
+    color: #5D5FEF;
+}
+
+#resume .top .infoContainer .avatar .chooseFileContainer {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+#resume .top .infoContainer .avatar .chooseFileContainer input[type='file'] {
+    display: block;
+    padding: 5px;
+    margin: 0 auto;
+}
+
+#resume .top .infoContainer .avatar .preview_container .preview {
+    display: block;
+    width: 20%;
+    border-radius: 100%;
+    border: 1px solid #5D5FEF;
+    box-sizing: border-box;
+    padding: 2px;
+}
+
+#editResumeForm input.hide{
+    display:none!important;
+}
+
+#editResumeForm .times,
+#editResumeForm .areas {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 37px;
+}
+
+#editResumeForm .times h3,
+#editResumeForm .areas h3 {
+    font-weight: bold;
+    font-size: 18px;
+    border: 2px solid #5D5FEF;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: #5D5FEF;
+    margin-right: 40px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+#editResumeForm .times h3:hover,
+#editResumeForm .areas h3:hover {
+    background-color: black;
+    color: white;
+}
+
+#resume .chooseTime .timeChosenWindow,
+#resume .chooseArea .areaChosenWindow,
+#event.edit .chooseArea .areaChosenWindow,
+#organiserManage .chooseTime .timeChosenWindow,
+#organiserManage .chooseArea .areaChosenWindow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#resume .chooseTime .timeChosenWindow h3,
+#resume .chooseArea .areaChosenWindow h3,
+#event.edit .chooseArea .areaChosenWindow h3,
+#organiserManage .chooseTime .timeChosenWindow h3,
+#organiserManage .chooseArea .areaChosenWindow h3 {
+    font-weight: bold;
+    font-size: 24px;
+    padding: 6px;
+    margin-top: 40px;
+}
+
+#resume .chooseTime .timeChosenWindow p.intro,
+#resume .chooseArea .areaChosenWindow p.intro,
+#event.edit .chooseArea .areaChosenWindow p.intro,
+#organiserManage .chooseTime .timeChosenWindow p.intro,
+#organiserManage .chooseArea .areaChosenWindow p.intro{
+    margin-bottom: 20px;
+}
+
+#resume .chooseArea .areaChosenWindow .areaOptions,
+#event.edit .chooseArea .areaChosenWindow .areaOptions,
+#organiserManage .chooseArea .areaChosenWindow .areaOptions{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#resume .chooseTime .timeChosenWindow p.timeOption,
+#resume .chooseArea .areaChosenWindow p.areaOption,
+#event.edit .chooseArea .areaChosenWindow p.areaOption,
+#organiserManage .chooseTime .timeChosenWindow p.timeOption,
+#organiserManage .chooseArea .areaChosenWindow p.areaOption {
+    background: rgba(255, 207, 114, 0.5);
+    border-radius: 50px;
+    padding: 5px 20px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: all ease 0.5s;
+}
+
+#resume .chooseArea .areaChosenWindow p.areaOption,
+#event.edit .chooseArea .areaChosenWindow p.areaOption,
+#organiserManage .chooseArea .areaChosenWindow p.areaOption {
+    margin: 10px;
+}
+
+#resume .chooseTime .timeChosenWindow p.timeOption:hover,
+#resume .chooseTime .timeChosenWindow .confirm:hover,
+#resume .chooseArea .areaChosenWindow .confirm:hover,
+#resume .chooseArea .areaChosenWindow p.areaOption:hover,
+#event.edit .chooseArea .areaChosenWindow .confirm:hover,
+#event.edit .chooseArea .areaChosenWindow p.areaOption:hover, 
+#organiserManage .chooseTime .timeChosenWindow p.timeOption:hover,
+#organiserManage .chooseTime .timeChosenWindow .confirmButton:hover,
+#organiserManage .chooseArea .areaChosenWindow p.areaOption:hover,
+#organiserManage .chooseArea .areaChosenWindow .confirmButton:hover {
+    background-color: black;
+    color: white;
+}
+
+#resume .chooseTime .timeChosenWindow p.timeOption.chosen,
+#resume .chooseArea .areaChosenWindow p.areaOption.chosen,
+#event.edit .chooseArea .areaChosenWindow p.areaOption.chosen,
+#organiserManage .chooseTime .timeChosenWindow p.timeOption.chosen,
+#organiserManage .chooseArea .areaChosenWindow p.areaOption.chosen {
+    background-color: #FF7E06;
+    color: white;
+}
+
+#resume .chooseTime .timeChosenWindow .confirm,
+#resume .chooseArea .areaChosenWindow .confirm,
+#event.edit .chooseArea .areaChosenWindow .confirm,
+#organiserManage .chooseTime .timeChosenWindow .confirmButton,
+#organiserManage .chooseArea .areaChosenWindow .confirmButton {
+    border: 2px solid #5D5FEF;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #5D5FEF;
+    padding: 15px 15px;
+    cursor: pointer;
+    transition: all ease 0.5s;
+    position: absolute;
+    bottom: 40px;
+}
+
+#resume .chooseTime.hide,
+#resume .chooseArea.hide,
+#event.edit .chooseArea.hide,
+#organiserManage .chooseTime.hide,
+#organiserManage .chooseArea.hide {
+    display: none;
+}
+
+#resume .bottom .requirements .skillOption,
+#event.edit .requirements .skillOption {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 10px 20px 10px 0;
+}
+
+#noResume {
+    width: 100%;
+}
+
+#noResume h2 {
+    margin: 30px;
+    text-align: center;
+    font-size: 34px;
+} 
+
+#noResume .apply {
+    display: inline-block;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #5D5FEF;
+    color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+#noResume .apply:hover {
+    background-color: black;
+}
+
+/*Edit Event*/
+#event.edit .intro .data input {
+    display: inline-block;
+    margin: 5px 0;
+}
+#event.edit .intro .data #editEventAddress {
+    width: 500px;
+}
+
+#event.edit .interact .chooseAreaButton {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #5D5FEF;
+    border: 2px solid #5D5FEF;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    font-weight: bold;
+}
+
+#event.edit .interact .chooseAreaButton:hover {
+    background-color: black;
+    color: white;
+}
+
+#event.edit .chooseArea .areaChosenWindow .cancel {
+    width: auto;
+}
+
+#event.edit .detail .eventAvatarContainer {
+    width: 20%;
+    overflow: hidden;
+}
+
+#event.edit #eventAvatar {
+    max-width: 100%;
+    width: 100%;
+}
+
+#event.edit .previewContainer {
+    display: flex;
+    width: 20%;
+    margin-left: 73%;
+    margin-bottom: 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#event.edit .previewContainer .previewImage {
+    width: 100px;
+    height: 100px;
+}
+
+#event.edit .previewContainer .preview {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#event.edit .previewContainer .preview span {
+    display: block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #5D5FEF;
+}
+
+/*Organiser management page*/
+body.manageBody {
+    background-color: #F6F7FF;
+    overflow-x: hidden;
+}
+
+#organiserManage {
+    width: 100%;
+}
+
+#organiserManage .management {
+    width: 90%;
+    margin: 70px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#organiserManage .events {
+    width: 80%;
+    height: 950px;
+    background-color: white;
+}
+
+#organiserManage .events .eventsContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#organiserManage .events h2 {
+    font-size: 48px;
+    line-height: 56px;
+    color: #5D5FEF;
+    padding: 10px 20px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+#organiserManage .events .eventList {
+    display: flex;
+    background-color: #F6F7FF;
+    width: 20%;
+    height: 824px;
+    margin: 20px;
+    box-sizing: border-box;
+    padding: 30px 0;
+    flex-direction: column;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+#organiserManage .events .eventList .category {
+    margin: 20px 0;
+    position: relative;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #5D5FEF;
+    transition: all 0.2s;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(59, 182, 225);
+}
+
+#organiserManage .events .eventList .category .arrow {
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    width: 0px;
+    height: 0px;
+    border-color: transparent transparent transparent #5D5FEF;
+    border-width: 10px;
+    border-style: solid;
+    transform-origin: left center;
+}
+
+#organiserManage .events .eventList .category p.focus+.arrow {
+    animation: rotate_arrow 0.5s ease-in-out forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes rotate_arrow {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(90deg)
+    }
+}
+
+#organiserManage .events .eventList .category p {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px 0;
+    padding-left: 40px;
+    transition: background-color 0.5s ease;
+}
+
+#organiserManage .events .eventList .category p:hover {
+    background-color: rgba(93, 95, 239, 0.38);
+}
+
+#organiserManage .events .eventList .category p.focus {
+    background-color: rgba(93, 95, 239, 0.38);
+}
+
+#organiserManage .events .eventList .category .lists {
+    display: none;
+    transition: all 0.5s ease;
+    padding: 5px 0;
+}
+
+#organiserManage .events .eventList .category .lists.show {
+    display: block;
+    animation: list_show 0.5s ease;
+    animation-iteration-count: 1;
+}
+
+@keyframes list_show {
+    0% {
+        opacity: 0;
+        transform: translateY(-150%);
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#organiserManage .events .eventList .category .lists h3 {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px;
+    margin-left: 23px;
+    margin-right: 5px;
+    word-break:break-all;
+    box-sizing: border-box;
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    display: block;
+    cursor: pointer;
+    transition: all ease 0.5s;
+    position: relative;
+}
+
+#organiserManage .events .eventList .category .lists h3 .amount {
+    line-height: 30px;
+    position: absolute;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    right: 0px;
+    top: -12px;
+    background-color: darkred;
+    color: white;
+    border-radius: 100%;
+}
+
+#organiserManage .events .eventList .category .lists h3.focus {
+    background-color: #CCCFE4;
+    box-shadow: none;
+}
+
+#organiserManage .events .eventList .category .lists h3:hover {
+    background-color: black;
+    color: white;
+}
+
+#organiserManage .events .eventList .category .lists h3.focus:hover {
+        background-color: #CCCFE4;
+        color: black;
+}
+
+#organiserManage .events .eventDetail {
+    width: 72%;
+    height: 824px;
+    display: inline-block;
+    margin-top: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#organiserManage .events .eventDetail .eventInfo {
+    display: flex;
+    padding: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+    position: relative;
+}
+
+#organiserManage .events .eventDetail .eventInfo img {
+    width: 160px;
+    display: block;
+}
+
+#organiserManage .events .eventDetail .eventInfo img.event_intro {
+    width: 100%;
+}
+
+#organiserManage .events .eventDetail .eventInfo .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+#organiserManage .events .eventDetail .eventInfo h3.blue {
+    background-color: rgb(59, 182, 225);
+    width: 100%;
+    color: white;
+    height: 40px;
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+#organiserManage .events .eventDetail .eventInfo .text p {
+    width: 75%;
+}
+
+#organiserManage .events .eventDetail .eventInfo .text h4 {
+    font-size: 24px;
+    cursor: pointer;
+    width: 75%;
+}
+
+#organiserManage .events .eventDetail .eventInfo .text h4:hover {
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+#organiserManage .events .eventDetail .icons,
+#myApplication .management .applications .content .processing .container .status .icons {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    border: 1px solid #5D5FEF;
+    box-sizing: border-box;
+    border-radius: 5px;
+    transition: 0.5s ease all;
+    text-align: center;
+    background-color: #E9EAF2;
+    cursor: pointer;
+}
+
+#organiserManage .events .eventDetail .icons svg,
+#myApplication .management .applications .content .processing .container .status .icons svg {
+    width: 35px;
+    height: 35px;
+    margin-top: 50%;
+    transform: translateY(-50%);
+}
+
+#organiserManage .events .eventDetail .icons:hover,
+#myApplication .management .applications .content .processing .container .status .icons:hover {
+    background: rgba(93, 95, 239, 0.8);
+}
+
+#organiserManage .events .eventDetail .icons:hover svg,
+#myApplication .management .applications .content .processing .container .status .icons:hover svg {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#organiserManage .events .eventDetail .eventInfo .tianxie {
+    right: 72px;
+    bottom: 20px;
+    color: #5D5FEF;
+}
+
+#organiserManage .events .eventDetail .resume.filtered {
+    display: none!important;
+}
+
+#organiserManage .events .eventDetail .resume .gou {
+    right: 72px;
+    bottom: 10px;
+    color: #57DB54;;
+}
+
+#organiserManage .events .eventDetail .eventInfo .lajixiang {
+    right: 15px;
+    bottom: 20px;
+    color: #5D5FEF;
+}
+
+#organiserManage .events .eventDetail .resume .cha {
+    right: 15px;
+    bottom: 10px;
+    color: #EF5D5D;;
+}
+
+#organiserManage .events .eventDetail .toPublic {
+    position: absolute;
+    right: 20%;
+    bottom: 50%;
+    display: flex;
+    align-items: center;
+}
+
+#organiserManage .events .eventDetail .toPublic .back {
+    position: relative;
+    display: inline-block;
+    width: 82px;
+    height: 41px;
+    background-color: #C4C4C4;
+    border: 1px solid rgba(93, 95, 239, 0.8);
+    border-radius: 20.5px;
+    transition: all 0.5s ease;
+}
+
+#organiserManage .events .eventDetail .toPublic .back.ongoing {
+    background-color: #B2F0E3;
+}
+
+#organiserManage .events .eventDetail .toPublic .back.ended {
+    background-color: #EF5D5D;
+}
+
+#organiserManage .events .eventDetail .toPublic .back .button {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 41px;
+    height: 41px;
+    border-radius: 100%;
+    background-color: white;
+    z-index: 1;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    opacity: 1;
+}
+
+#organiserManage .events .eventDetail .toPublic .back .status {
+    position: absolute;
+    left: 50%;
+    top: 110%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+#organiserManage .events .eventDetail .toPublic .back.slide {
+    background-color: #B2F0E3;
+}
+
+#organiserManage .events .eventDetail .toPublic .back.slide .button {
+    left: 100%;
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+#organiserManage .events .eventDetail .filter h4,
+#organiserManage .events .eventDetail .approved h4 {
+    font-size: 24px;
+    margin-top: 40px;
+}
+
+#organiserManage .events .eventDetail .filter .times,
+#organiserManage .events .eventDetail .filter .areas {
+    display: flex;
+    margin: 20px 10px;
+    align-items: center;
+}
+
+#organiserManage .events .eventDetail .filter h5 {
+    border: 2px solid #5D5FEF;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 5px 20px;
+    color: #5D5FEF;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+#organiserManage .events .eventDetail .filter .keyword {
+    margin: 10px;
+}
+
+#organiserManage .events .eventDetail .filter h5:hover {
+    background-color: black;
+    color: white;
+}
+
+#organiserManage .events .eventDetail .resume {
+    background-color: #F6F7FF;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    margin-top: 25px;
+    position: relative;
+}
+
+#organiserManage .events .eventDetail .resume .view {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    border: 2px solid #5D5FEF;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #5D5FEF;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    padding: 12px 16px;
+    transform: translate(-50%, -50%);
+}
+
+#organiserManage .events .eventDetail .resume .view:hover {
+    background-color: black;
+    color: white;
+}
+
+#organiserManage .events .eventDetail .resume.slideOut,
+#myApplication .content .detail.slideOut {
+    animation: slide_out 0.8s ease forwards;
+}
+
+@keyframes slide_out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        margin-left: 120%;
+        position: absolute;
+    }
+}
+
+#organiserManage .personal {
+    width: 18%;
+    height: 420px;
+    background-color: white;
+    text-align: center;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+#organiserManage .personal img {
+    display: inline-block;
+    width: 90%;
+    border-radius: 100%;
+}
+
+#organiserManage h3 {
+    font-size: 34px;
+    line-height: 36px;
+    margin-top: 20px;
+}
+
+#organiserManage .personal .edit {
+    margin-top: 20px;
+    display: inline-block;
+    border: 2px solid #5D5FEF;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #5D5FEF;
+    padding: 10px 5px;
+    cursor: pointer;
+    transition: 0.5s ease all;
+}
+
+#organiserManage .personal .edit:hover {
+    color: white;
+    background-color: black;
+}
+
+#organiserManage .addEvent {
+    position: fixed;
+    bottom: 0;
+    left: 130px;
+    z-index: 1;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #CCCFE4;
+    border-radius: 15px 15px 0px 0px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+#organiserManage .addEvent:hover {
+    background-color: #5D5FEF;
+}
+
+#organiserManage .addEvent svg {
+    width: 50px;
+    height: 60px;
+    color: white;
+}
+
+#organiserManage .addEvent .tip {
+    position: absolute;
+    width: 70px;
+    background-color: #5D5FEF;
+    color: white;
+    left: 100%;
+    bottom: 100%;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+
+#organiserManage .addEvent:hover .tip {
+    opacity: 1;
+    visibility: visible;
+}
+
+#organiserManage .confirm .confirmWindow,
+#myApplication .confirm .confirmWindow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#organiserManage .confirm .confirmWindow strong,
+#myApplication .confirm .confirmWindow strong {
+    font-weight: bold;
+    font-size: inherit;
+}
+
+#organiserManage .confirm .confirmWindow h3,
+#myApplication .confirm .confirmWindow h3 {
+    font-size: 34px;
+    font-weight: normal;
+    margin-bottom: 30px;
+    width: 70%;
+}
+
+#organiserManage .confirm .confirmWindow p,
+#myApplication .confirm .confirmWindow p {
+    font-size: 20px;
+}
+
+#organiserManage .confirm .confirmWindow .buttons,
+#myApplication .confirm .confirmWindow .buttons {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+}
+
+#organiserManage .confirm .confirmWindow .buttons div,
+#myApplication .confirm .confirmWindow .buttons div {
+    display: inline-block;
+    border-radius: 5px;
+    width: 155px;
+    height: 40px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 40px;
+    cursor: pointer;
+    transition: all ease 0.5s;
+}
+
+#organiserManage .confirm .confirmWindow .buttons div.yes,
+#myApplication .confirm .confirmWindow .buttons div.yes {
+    border: 2px solid #5D5FEF;
+    color: #5D5FEF;  
+    margin-right: 130px;
+}
+
+#organiserManage .confirm .confirmWindow .buttons div.no,
+#myApplication .confirm .confirmWindow .buttons div.no {
+    border: 2px solid #EF5D5D;
+    color: #EF5D5D;
+}
+
+#organiserManage .confirm .confirmWindow .buttons div.yes:hover,
+#myApplication .confirm .confirmWindow .buttons div.yes:hover {
+    background-color: #5D5FEF; 
+    color: white;
+    border-color: black;
+}
+
+#organiserManage .confirm .confirmWindow .buttons div.no:hover,
+#myApplication .confirm .confirmWindow .buttons div.no:hover {
+    background-color: #EF5D5D; 
+    color: white;
+    border-color: black;
+}
+
+#organiserManage .confirm.hide,
+#myApplication .confirm.hide {
+    display: none;
+}
+
+/*My Application Page*/
+#myApplication {
+    width: 100%;
+}
+
+#myApplication .management {
+    width: 80%;
+    margin: 70px auto;
+    display: flex;
+    justify-content: center;
+}
+
+#myApplication .management .applications {
+    width: 65%;
+    height: 950px;
+    box-sizing: border-box;
+    background-color: white;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-bottom: 60px;
+}
+
+#myApplication .management .applications .headers {
+    display: flex;
+    width: 100%;
+}
+
+#myApplication .management .applications .headers h3 {
+    width: 50%;
+    box-sizing: border-box;
+    height: 75px;
+    line-height: 75px;
+    text-align: center;
+    font-size: 34px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+#myApplication .management .applications .headers h3.focus {
+    background-color: #CCCFE4;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#myApplication .management .applications .content {
+    width: 100%;
+    flex-direction: column;
+    margin-top: 20px;
+    display: flex;
+}
+
+#myApplication .management .applications .content .container.show {
+    display: flex;
+    animation: list_show 0.5s ease;
+    animation-iteration-count: 1;
+}
+
+#myApplication .management .applications .content h4 {
+    font-size: 26px;
+    text-align: center;
+    position: relative;
+    margin-top: 30px;
+    padding: 10px 0;
+    background-color: rgba(93, 95, 239, 0.38);
+    color: white;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+#myApplication .management .applications .content h4 .arrowBlock {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 100%;
+    transform: rotate(45deg);
+}
+
+#myApplication .management .applications .content h4 .arrowBlock.focus {
+    animation: rotate_arrow1 0.5s ease-in-out forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes rotate_arrow1 {
+    0% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(-45deg);
+    }
+}
+
+#myApplication .management .applications .content h4 .arrow {
+    width: 10px;
+    height: 10px;
+    border-left: 4px solid white;
+    border-bottom: 4px solid white; 
+}
+
+#myApplication .management .applications .content h4 .arrowBlock:hover {
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+#myApplication .management .applications .content .container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+
+#myApplication .management .applications .content .container .detail {
+    width: 95%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 0;
+    align-items: center;
+    padding: 20px;
+    background-color: #F6F7FF;
+}
+
+#myApplication .management .applications .content .container .detail .intro {
+    width: 49%;
+}
+
+#myApplication .management .applications .content .container .detail .intro h5 {
+    font-weight: bold;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#myApplication .management .applications .content .container .detail .intro h5:hover {
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+#myApplication .management .applications .content .container .detail .intro p .time {
+    color: #FF7E06;
+}
+
+#myApplication .management .applications .content .container .detail p {
+    line-height: 15px;
+    margin-top: 10px;
+}
+
+#myApplication .management .applications .content .container .detail .status {
+    width: 49%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#myApplication .management .applications .content .processing .container .status {
+    position: relative;
+}
+
+#myApplication .management .applications .content .processing .container .status .lajixiang {
+    right: -20px;
+    bottom: -20px;
+    color: #5D5FEF;
+}
+
+#myApplication .management .applications .content .container .detail .status img {
+    display: block;
+    width: 150px;
+}
+
+#myApplication .processingCircle,
+#myApplication .passedCircle,
+#myApplication .deniedCircle {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+#myApplication .processingCircle {
+    background-color: #FF7E06;
+}
+
+#myApplication .passedCircle {
+    background-color: #25E306;
+}
+
+#myApplication .deniedCircle {
+    background-color: #C4C4C4;
+}
+
+#myApplication .personal {
+    width: 18%;
+    height: 420px;
+    background-color: white;
+    text-align: center;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+#myApplication .personal img {
+    display: inline-block;
+    width: 90%;
+    border-radius: 100%;
+}
+
+#myApplication .personal h3 {
+    font-size: 34px;
+    line-height: 36px;
+    margin-top: 20px;
+}
+
+#myApplication .personal .edit {
+    margin-top: 20px;
+    display: inline-block;
+    border: 2px solid #5D5FEF;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #5D5FEF;
+    padding: 10px 5px;
+    cursor: pointer;
+    transition: 0.5s ease all;
+}
+
+#myApplication .personal .edit:hover {
+    color: white;
+    background-color: black;
+}
+
+#chooseFileButton,
+#chooseEventAvatarButton {
+    display: inline-block;
+    width: auto;
+    border: 2px solid #5D5FEF;
+    border-radius: 5px;
+    color: #5D5FEF;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.5s ease all;
+}
+
+#chooseFileButton:hover,
+#chooseEventAvatarButton:hover {
+    color: white;
+    background-color: black;
+}
+
+#homeMyEvents .leaflet-marker-icon {
+    border-radius: 50%;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+#homeMyEvents .leaflet-marker-icon:hover {
+    transform: scale(1.2);
+}
+
